@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+#gameBoard {
+    margin-top: 20px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    font-size: 2em;
+    text-align: center;
+    cursor: pointer;
+}
+
+#message {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+}
