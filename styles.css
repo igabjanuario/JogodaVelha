@@ -37,7 +37,8 @@ table {
 td {
     width: 100px;
     height: 100px;
-    border: 1px solid #00f2ff;
+    border: 1px solid #ffffff;
+    background-color: #ffffff4e;
     font-size: 20px;
     text-align: center;
     cursor: pointer;
