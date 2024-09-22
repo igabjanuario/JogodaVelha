@@ -6,20 +6,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Jogo da Velha</h1>
-
     <div id="jogadorForm">
-        <label for="jogador1">Nome do Jogador 1 (X):</label>
-        <input type="text" id="jogador1" required><br>
-
-        <label for="jogador2">Nome do Jogador 2 (O):</label>
+        <h1>Jogo da Velha</h1>
+        <label for="jogador1">Jogador 1:</label>
+        <input type="text" id="jogador1" required><br><br>
+        <label for="jogador2">Jogador 2:</label>
         <input type="text" id="jogador2" required><br>
 
-        <button onclick="iniciarJogo()">Iniciar Jogo</button>
+        <button onclick="iniciarJogo()">Iniciar</button>
     </div>
 
     <div id="tabuleiroJogo" style="display: none;">
-        <div id="mensagem"></div>
+        <h1>Jogo da Velha</h1>
+        <div id="mensagem"></div><br>
         <table>
             <tr>
                 <td onclick="fazerJogada(this, 0)"></td>

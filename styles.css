@@ -1,12 +1,28 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Century Gothic, sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #f200ff8e;
+    color: #ffffff;
 }
 
 h1 {
-    margin-top: 20px;
+    font-family: Century Gothic, sans-serif;
+    text-align: center;
+    margin-top: 60px;
+    color: #00f2ff;
+}
+
+input {
+    font-family: Century Gothic, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+
+#jogadorForm {
+    margin-top: 250px;
 }
 
 #gameBoard {
@@ -21,19 +37,24 @@ table {
 td {
     width: 100px;
     height: 100px;
-    border: 1px solid #000;
-    font-size: 2em;
+    border: 1px solid #00f2ff;
+    font-size: 20px;
     text-align: center;
     cursor: pointer;
 }
 
 #message {
     margin-bottom: 10px;
-    font-size: 1.5em;
+    font-size: 15px;
 }
 
 button {
+    font-family: Century Gothic, sans-serif;
+    font-size: 15px;
     margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #00f2ff;
     padding: 10px 20px;
-    font-size: 1em;
+    color: #242a23eb;
 }

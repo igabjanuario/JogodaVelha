@@ -3,13 +3,13 @@ let tabuleiro = ["", "", "", "", "", "", "", "", ""];
 let jogoAtivo = true;
 let jogador1, jogador2;
 
-// Inicia jogo
+// Função para iniciar o jogo
 function iniciarJogo() {
     jogador1 = document.getElementById("jogador1").value;
     jogador2 = document.getElementById("jogador2").value;
 
     if (jogador1 === "" || jogador2 === "") {
-        alert("Insira o nome dos jogadores.");
+        alert("Insira o nome dos jogadores!");
         return;
     }
 
@@ -18,13 +18,13 @@ function iniciarJogo() {
     atualizarMensagem();
 }
 
-// Atualiza a mensagem: jogador atual
+// Função para atualizar a mensagem do jogador atual
 function atualizarMensagem() {
     let nomeJogador = jogadorAtual === "X" ? jogador1 : jogador2;
-    document.getElementById("mensagem").innerText = "Vez de " + nomeJogador + " (" + jogadorAtual + ")";
+    document.getElementById("mensagem").innerText = "Vez de " + nomeJogador + " (" + jogadorAtual + ") :";
 }
 
-// Verifica se há um vencedor ou empate após cada jogada
+//Função para verificar se há vencedor/empate depois de cada jogada
 function verificarVitoria() {
     const combinacoesVencedoras = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8], // Linhas
@@ -34,17 +34,19 @@ function verificarVitoria() {
 
     for (let i = 0; i < combinacoesVencedoras.length; i++) {
         const [a, b, c] = combinacoesVencedoras[i];
+
+        // Imprime mensagem em caso de vitória
         if (tabuleiro[a] && tabuleiro[a] === tabuleiro[b] && tabuleiro[a] === tabuleiro[c]) {
             jogoAtivo = false;
             let vencedor = jogadorAtual === "X" ? jogador1 : jogador2;
-            document.getElementById("mensagem").innerText = "Parabéns, " + vencedor + " venceu!";
+            document.getElementById("mensagem").innerText = "PARABÉNS, " + vencedor + " venceu :)";
             return true;
         }
     }
 
-    // Verificar empate
+    // Imprime mensagem em caso de empate
     if (!tabuleiro.includes("")) {
-        document.getElementById("mensagem").innerText = "O jogo terminou em empate!";
+        document.getElementById("mensagem").innerText = "O jogo terminou em empate :/";
         jogoAtivo = false;
         return true;
     }
@@ -52,7 +54,7 @@ function verificarVitoria() {
     return false;
 }
 
-// Faz jogada e alterna o turno
+// Função para realizar jogada e alternar jogador
 function fazerJogada(celula, indice) {
     if (!jogoAtivo || tabuleiro[indice] !== "") return;
 
@@ -65,7 +67,7 @@ function fazerJogada(celula, indice) {
     }
 }
 
-// Reinicia jogo
+// Função para reiniciar o jogo
 function reiniciarJogo() {
     tabuleiro = ["", "", "", "", "", "", "", "", ""];
     jogoAtivo = true;
